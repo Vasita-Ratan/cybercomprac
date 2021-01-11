@@ -149,6 +149,7 @@ console.log(x);
 
 
 */
+/*
 
 
                                                        //PRACTICE JAVASCRIPT :-1//
@@ -286,6 +287,7 @@ var mike,mary,john;
 mike = 97,134,105;
 mary = 116,94,123;
 john = 89,120,103;
+avgscore = 260
 
 var mikeavg = 97 + 134 + 105 / 3 ;
 console.log('mike average score is:- '  + mikeavg);
@@ -296,30 +298,235 @@ console.log('mary team average score is:-' + maryavg);
 var johnavg = 89 + 120 + 103 / 3;
 console.log('john team average score is:-' + johnavg);
 
-if(maryavg > johnavg)
+if(avgscore < maryavg )
 {
 	alert('mary team score ' +    maryavg   +  '  higher then john and mike team');
 	console.log('mary team average score is:-' + maryavg);
 	
 
 }
+else if(avgscore > johnavg && avgscore < mikeavg)
+{
+	alert('mike team score ' +    mikeavg   +  '  higher then john and mike team');
+	console.log('mike average score is:- '  + mikeavg);
+	
+}
 else
 {
 	alert('john team score ' + johnavg +  ' higher then mike and mary team');
 	console.log('john team average score is:-' + johnavg);
 }
-if(maryavg < mikeavg)
+*/
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+
+                                                                   /*Date:-11/01/21
+                                                                      practice*/
+
+//Boolean logic
+
+
+var firstname = 'Ratan';
+var age = 20;
+/*
+if(age < 15)
 {
-	alert('mike team score ' +    mikeavg   +  '  higher then john and mike team');
-	console.log('mike average score is:- '  + mikeavg);
+	console.log(firstname + ' boy');
+
+}
+else if(age >= 15 && age < 20)
+{
+		console.log(firstname + ' teenager');
+}
+else if(age >= 20 && age < 21)
+{
+		console.log(firstname + ' young man');
 }
 else
 {
-	alert('please try again!!!');
+		console.log(firstname + ' is a man');
+} 
+
+
+
+//Ternary operator(condition_if_else_statement)
+
+age >= 20 ? console.log(firstname + '  is brave boy') //if statement true this will executed
+    : console.log(firstname + ' Ratan is bad boy');//else statement false this will executed
+
+
+var behave = age < 19 ? 'brave' : 'bad';
+console.log(behave);
+
+if(age >=20)
+{
+	var behave = 'brave';
+}
+else
+{
+	var behave = 'bad';
+}
+*/
+
+//switch statement
+
+/*var job = 'doctor';
+switch(job){
+		case 'teacher':
+		case 'doctor':
+			        console.log(firstname + ' is doctor');
+			        break;
+
+		case 'driver':
+			        console.log(firstname + ' is driver');
+			        break;
+
+
+		case 'software Engineer':
+			        console.log(firstname + ' is software Engineer');
+			        break;
+
+		default :
+		          console.log('invalid');
 }
 
+switch(true){
+
+	case(age < 15):
+				console.log(firstname + ' boy');
+				break;
+	case(age >= 15 && age < 20):
+				console.log(firstname + ' teenager');
+				break;
+    case(age >= 20 && age < 21):
+				console.log(firstname + ' young man');
+				break;
+	default:
+			console.log(firstname + ' is a man'); 
+
+}
+
+//Truly and falsy values and equality operators
+
+//falsy :- undefined,0,null,'NAN'
+//truly :- means value is not falsy.
+
+var height;
+height = 100 ; 
+/*
+if(height=100 || height === 0)
+{
+	console.log('height define');
+}
+else
+{
+	console.log('height undefine');	
+}
+
+//Equality operator
+
+if(height === '100')//compare string to use double equal shymbol when compare '==='cant show in console we write in console check condition true or false
+{
+		console.log('height define');
+}
+else
+{
+	console.log('height undefine');	
+}
+
+// Function
+
+function calculateage(birthyear)
+{
+	return 2018 - birthyear;
+}
+
+var ratanage = calculateage(1999);
+var mananage = calculateage(1943);
+var karanage = calculateage(1994);
+console.log(ratanage,mananage,karanage);
+
+	
+
+function yearRetirement(year,firstname)
+{
+	var age = calculateage(year);
+	var retirment = 65 - age;
+
+	if(retirment > 0 )
+	{
+			console.log(firstname +' retirment of :- ' + retirment + ' year');
+	}
+	else
+	{
+		console.log(firstname +' already retirmented' );
+	}
+}
+yearRetirement(1999,'ratan');
+yearRetirement(1943,'manan');
+yearRetirement(1996,'karan');
+
+
+//Function statement and expression
+
+//functionn declaration
+
+function calc(num1,num2) {
+	// body...
+}
+
+//function expression
+
+var calc = function(job,firstname)
+{
+	switch(job){
+				case 'teacher':
+								return firstname + ' teacher';
+				case 'doctor':
+								return firstname + ' doctor';
+				case 'engineer':
+								return firstname + ' engineer';	
+				default :
+								return firstname + ' invalid';
+
+	}
+
+}
+console.log('teacher','manan');
+console.log('doctor','karan');
+console.log('engineer','ratan');
 
 
 
+//Array
+//intialize array
+var names = ['ratan','manan','karan','engineer'];
+var year = new Array(1999,1998,1997);
+console.log(names.length);
+console.log(names[2]);
+
+//mutate array
+names[1] = 'mayank';
+names[names.length] = 'vaibhav';
+console.log(names);
+
+//Different datatypes
+
+names.push = 'abhishek';//to add new element in array
+console.log(names);
+
+names.unshift('mr');//to add something at begining
+console.log(names);
+
+//names.pop() //to delete last element in array
+//console.log(names);
+
+console.log(names.indexOf('ratan'));//its return with index number and if either reutrn -1 means false
+
+console.log(names.indexOf(23));//if either reutrn -1 means false because this is not in array
+
+var isengineer = names.indexOf('engineer') === -1 ? 'Ratan is not engineer' : 'Ratan is engineer';
+console.log(isengineer);//using if_else statement 
 
 
+*/
